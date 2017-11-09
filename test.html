@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AIR</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<b style="font-size:18px">Choose your classes</b>
+<br><br>
+Teacher Name:&nbsp;<input> 
+<br><br>
+<b>Morning Schedule</b>
+<table class="styling-table" border=1>
+<thead>
+	 <tr>
+            <th>First Period</th>
+            <th>Second Period</th>
+            <th>Third Period</th>
+        </tr>
+</thead>
+
+<tr>
+
+
+<td>
+<div class="dropdown">
+
+    <!-- <input type="button" id="select_staff" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" value="Select One" > -->
+    <button type="button" id="select_staff" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" value="Select One">Select One    <span class="caret"></span></button>
+
+    <ul id="show-here" class="dropdown-menu">
+      <li class="dropdown-header math"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;Math</li>
+      <li class="sub-list"><a class="math-1" href="#">Grade 1</a></li>
+      <li class="sub-list"><a class="math-1" href="#">Grade 2</a></li>
+      <li class="dropdown-header science"><i class="fa fa-flask" aria-hidden="true"></i>&nbsp;&nbsp;Science</li>
+      <li class="sub-list"><a class="science-1" href="#">Grade 1</a></li>
+      <li class="sub-list"><a class="science-1" href="#">Grade 2</a></li>
+
+    </ul>
+  </div>
+</td>
+
+
+<td>
+<div class="dropdown">
+    <!-- <input type="button" id="select_staff" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" value="Select One" > -->
+    <button type="button" id="select_staff" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" value="Select One">Select One    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-header math"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;Math</li>
+      <li class="sub-list"><a class="math-1" href="#">Grade 1</a></li>
+      <li class="sub-list"><a class="math-1" href="#">Grade 2</a></li>
+      <li class="dropdown-header science"><i class="fa fa-flask" aria-hidden="true"></i>&nbsp;&nbsp;Science</li>
+      <li class="sub-list"><a class="science-1" href="#">Grade 1</a></li>
+      <li class="sub-list"><a class="science-1" href="#">Grade 2</a></li>
+
+    </ul>
+  </div>
+</td>
+
+
+  
+
+<td>
+<div class="dropdown">
+
+    <button type="button" id="select_staff" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" value="Select One">Select One    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-header math"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;Math</li>
+      <li class="sub-list"><a class="math-1" href="#">Grade 2</a></li>
+      <li class="dropdown-header science"><i class="fa fa-flask" aria-hidden="true"></i>&nbsp;&nbsp;Science</li>
+      <li class="sub-list"><a class="science-1" href="#">Grade 1</a></li>
+
+    </ul>
+  </div>
+</td>
+
+
+</tr>
+</table>
+<script>
+  $(".dropdown-menu li a").click(function(e){
+  e.preventDefault();
+  var showText = $(this).text();
+  var getClass =  $(this).attr('class');  
+
+  $(this).parents('.dropdown').find('.dropdown-toggle').html(showText);
+   if (getClass == "math-1") {
+
+      $(this).parents('.dropdown').find('.dropdown-toggle').css("background-color",'rgb(212, 245, 255)');
+      $(this).parents('.dropdown').find('.dropdown-toggle').prepend('<i class="fa fa-calculator"></i>   ');
+      $(this).parents('.dropdown').find('.dropdown-toggle').append('<span class="caret"><span>');
+
+   }
+   else if(getClass == "science-1"){
+      $(this).parents('.dropdown').find('.dropdown-toggle').css("background-color",'#ffeeba');
+      $(this).parents('.dropdown').find('.dropdown-toggle').prepend('<i class="fa fa-flask"></i>   ');
+      $(this).parents('.dropdown').find('.dropdown-toggle').append('<span class="caret"><span>');
+   }
+
+});
+
+
+</script>
+
+</body>
+</html>

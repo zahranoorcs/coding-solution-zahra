@@ -1,0 +1,71 @@
+.styling-table {
+    border: solid 1px grey;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+
+.styling-table thead th {
+    border-bottom: solid 1px #d3d3d3;
+    border-top:solid 1px grey;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+td {
+    border: solid 1px grey;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+body{
+    padding:20px;
+}
+
+.dropdown{
+
+    padding:20px;
+}
+.sub-list{
+
+    margin-left: 20px;
+}
+
+li.dropdown-header{
+    color:black;
+    font-weight: 900;
+}
+
+.dropdown-toggle{
+
+    background-color: none:
+}
+.btn-default{
+    border-color:#45c7ef !important;
+    border-radius: 0px !important;
+}
+
+.dropdown-menu{
+        border-color:#45c7ef !important;
+
+}
+
+.math{
+    background-color: #cbf0f5;
+}
+.science{
+        background-color: #fff0c4;
+
+}
+
+
+.dropdown li.has-child > a:after {
+   color: #444;
+   content: ' ▾';
+}
+
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background-color: white !important;
+}
